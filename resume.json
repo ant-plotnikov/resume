@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Denys Nykyforov",
+    "name": "Anton Plotnikov",
     "label": "Software Engineer",
-    "image": "",
-    "email": "popalay1@gmail.com",
-    "phone": "+38 (066) 527-82-43",
-    "summary": "A forward-thinking developer offering more than seven years of experience in designing, building, testing and supporting Android applications. Adaptable and able to quickly pick up new techniques. Having much experience of creating solutions to complex problems.",
+    "image": "./pictures/profile.jpg",
+    "email": "ent.plotnikov@gmail.com",
+    "phone": "+38 (050) 779-22-24",
+    "summary": "Software engineer, proficient in vast front-end technologies stack with more then 3 years of production experience. Working in huge distributed and remote teams, providing RFCs, starting projects form scratch and supporting them through release, working with complex infrastructures, designing software architectures, successful in communication, open to new challenges and opportunities.",
     "location": {
       "countryCode": "UA",
       "city": "Kharkiv",
@@ -15,186 +15,83 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "Denys Nykyforov",
-        "url": "https://www.linkedin.com/in/ACoAAB6_jmABjit6p6pj56eeww8bR4XXcAIY9Bc/"
-      },
-      {
-        "network": "Twitter",
-        "username": "devpopalay",
-        "url": "http://twitter.com/devpopalay"
-      },
-      {
-        "network": "Github",
-        "username": "popalay",
-        "url": "http://github.com/popalay"
-      },
-      {
-        "network": "Google Play",
-        "username": "Denys Nykyforov",
-        "url": "https://play.google.com/store/apps/dev?id=8807492488697709539"
+        "username": "Anton Plotnikov",
+        "url": "https://www.linkedin.com/in/anton-plotnikov-90137b174"
       }
     ]
   },
   "work": [
     {
-      "name": "Grab",
-      "location": "Singapore",
+      "name": "EPAM",
+      "location": "Ukraine",
       "position": "Senior Software Engineer",
-      "startDate": "2020-02-28",
-      "endDate": "2021-03-31",
+      "startDate": "2018-06-22",
+      "endDate": "2021-06-18",
       "highlights": [],
-      "summary": "Grab is Southeast Asia’s leading superapp. It provides everyday services such as deliveries, mobility, financial services, enterprise services and others to millions of users across the region.",
-      "url": "https://www.grab.com/sg/"
+      "summary": "EPAM is a leading digital consulting company with more then 40K developers providing excellent programming solutions for diverse business domains from gaming to healthcare.",
+      "url": "https://www.epam.com/"
     },
     {
-      "name": "SoftServe",
-      "location": "Kharkiv, Ukraine",
+      "name": "Line-Up",
+      "location": "Ukraine",
       "position": "Software Engineer",
-      "startDate": "2017-10-31",
-      "endDate": "2019-11-30",
+      "startDate": "2018-03-11",
+      "endDate": "2018-06-12",
       "highlights": [],
-      "summary": "SoftServe is a digital consulting company that advises and provides at the cutting-edge of technology.",
-      "url": "https://www.softserveinc.com/en-us"
-    },
-    {
-      "name": "AppliKey",
-      "location": "Kharkiv, Ukraine",
-      "position": "Android Developer",
-      "startDate": "2014-10-31",
-      "endDate": "2017-10-31",
-      "highlights": [],
-      "summary": "Applikey is a top mobile app development company creating custom native, hybrid, and cross-platform applications for businesses worldwide.",
-      "url": "https://www.linkedin.com/company/applikey-solutions/"
+      "summary": "LineUp is a business and technology solutions company of highly experienced professionals.",
+      "url": "https://lineup.com.ua/"
     }
   ],
   "projects": [
     {
-      "name": "Barnee",
-      "entity": "Home",
-      "description": "Cocktail recipe app.",
-      "startDate": "2021-04-01",
-      "endDate": "",
-      "url": "https://play.google.com/store/apps/details?id=com.popalay.barnee",
+      "name": "Epic Online Services",
+      "entity": "Epic Games",
+      "description": "Epic is a leading interactive entertainment company and provider of 3D engine technology adopted across industries such as film and television, architecture, automotive, manufacturing, and simulation. Also Epic operates Fortnite, one of the world’s largest games with over 350 million accounts.",
+      "startDate": "2020-08-02",
+      "endDate": "2021-06-18",
+      "url": "",
       "roles": [
-        "Senior Developer"
+        "Key Developer"
       ],
       "highlights": [
-        "Hobby project;",
-        "Kotlin Multiplatform Mobile;",
-        "Jetpack Compose"
+        "Working in 7 subsystems with different tech stack;",
+        "Working in a distributed team of 80+ professionals;",
+        "Working with hybrid applications and micro front-ends;",
+        "Introduce code quality gates, integrate them to CI;",
+        "Taking part in software architectural decisions, system design;",
+        "Ownership for 1 service;",
+        "Taking part in infosec audits."
       ]
     },
     {
-      "name": "Grab",
-      "entity": "Grab",
-      "description": "Grab is Southeast Asia's #1 ride-hailing app, food delivery service, and cashless payment solution all in one. With the new Grab app, you'll get the most convenient booking service for private cars and taxis from the largest community of drivers in the region, food delivery from your favorite restaurants to satisfy any craving, and cashless payments in-app and at merchants across the city. Whatever you need, Grab has you covered.",
-      "startDate": "2020-02-10",
-      "endDate": "2021-03-31",
-      "url": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger",
-      "roles": [
-        "Senior Developer"
-      ],
-      "highlights": [
-        "Working with more than 100 team mates from different time zones;",
-        "Working both on passenger application and on driver application;",
-        "More than 1 million daily active users;",
-        "Build time was reduced by 60% by splitting modules and removing unnecessary dependencies;",
-        "Code coverage was increased from 40% to 70%",
-        "Started migration to Bazel build system"
-      ]
-    },
-    {
-      "name": "Affiliate Marketing app",
-      "entity": "SoftServe",
-      "description": "A referral app that anyone can use to refer trusted home services. With the click of a button, you can refer your Clients, friends, family, co-workers, and even someone you just met. This app helps you make easy money by sharing services with friends, family or acquaintances that trust your relationship and recommendation. Helps you make money by referring services that you use, trust, or sell. Increases your network of products you can monetize with your existing customer base.",
+      "name": "Video Streaming Service",
+      "entity": "EPAM",
+      "description": "A Netflix-like application for a national TV provider, supporting various devices and streaming protocols, applying modern accessibility standards, integrated with ads and analytics systems to enhance consumer experience.",
       "startDate": "2018-08-31",
       "endDate": "2019-11-31",
       "url": "",
       "roles": [
-        "Developer",
-        "Technical lead"
-      ],
-      "highlights": [
-        "20 team members"
-      ]
-    },
-    {
-      "name": "Application for agriculture sector",
-      "entity": "SoftServe",
-      "description": "Project that supplies farmers with different agri-related functionalities such as: weather forecasts, help for day to day business, agri news, vocational training and experts’ consultancy.",
-      "startDate": "2017-10-31",
-      "endDate": "2018-08-31",
-      "url": "",
-      "roles": [
         "Developer"
       ],
       "highlights": [
-        "18-20 team members"
-      ]
-    },
-    {
-      "name": "Application for watching ads",
-      "entity": "Applikey",
-      "description": "App for watching branded and sponsored short video content. The app uses device sensors to measure engagement and verifies that you watched the video. Answer a quick series of questions to determine your interest level and overall openness to messaging, and receive rewards that you can exchange for cash, merchandise, and charitable contributions.",
-      "startDate": "2017-02-31",
-      "endDate": "2017-10-31",
-      "url": "",
-      "roles": [
-        "Developer"
-      ]
-    },
-    {
-      "name": "Fingerprint scanner",
-      "entity": "Applikey",
-      "description": "Real fingerprint collection application that will only work when a supported accessory is detected by the application. The app works with connected by USB or Bluetooth devices. This Application allows you to scan high quality fingerprint images and store them for various purposes. Available options are: Email, FTP, and Save to File.",
-      "startDate": "2015-08-31",
-      "endDate": "2016-02-31",
-      "url": "",
-      "roles": [
-        "Developer"
-      ],
-      "highlights": [
-        "The application was written without having a physical device"
-      ]
-    },
-    {
-      "name": "Marketplace app",
-      "entity": "Applikey",
-      "description": "A marketplace and community for buying, selling & renting designer fashion.",
-      "startDate": "2015-02-31",
-      "endDate": "2015-07-31",
-      "url": "",
-      "roles": [
-        "Developer"
+        "Working in a distributed team of 30+ members;",
+        "Working with various devices and streams, such as PS4, HbbTV, ChromeCast, WEB;",
+        "Adding core logic modules to existing framework;",
+        "Working closely in collaboration with IOS and Android teams;",
+        "Working on Observability and Ads integration;",
+        "Ownership for ChromeCast Receiver application."
       ]
     }
   ],
-  "volunteer": [
-    {
-      "organization": "droidcon",
-      "position": "International Volunteer",
-      "startDate": "2018-06-30",
-      "endDate": "2018-07-02",
-      "summary": "",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/droidcon/"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Associate Android Developer",
-      "date": "2018-12-08",
-      "url": "https://www.credential.net/3451f69d-4fbe-48e0-8dcf-669f271b638b",
-      "issuer": "Google"
-    }
-  ],
+  "volunteer": [],
+  "certificates": [],
   "education": [
     {
-      "institution": "National Technical University «Kharkiv Polytechnic Institute»",
-      "area": "System Programming",
+      "institution": "Kharkiv V.N.Karazin National University",
+      "area": "Biochemistry",
       "studyType": "Master",
-      "startDate": "2012-12-31",
-      "endDate": "2018-12-31",
+      "startDate": "2012-09-31",
+      "endDate": "2018-02-18",
       "score": "4.8",
       "courses": []
     }
@@ -205,66 +102,69 @@
     {
       "name": "Programming Languages/Technologies",
       "keywords": [
-        "Android SDK",
-        "Kotlin",
-        "Java",
+        "JS Core",
+        "Typescript",
         "Software Architecture Design",
         "Clean Architecture",
-        "MVP/MVVM/MVI"
+        "REST, GraphQL",
+        "MVC/MVP/MVVM",
+        "Micro Front-Ends"
       ]
     },
     {
       "name": "Frameworks/Libraries",
       "keywords": [
-        "RxJava",
-        "Coroutines",
-        "Android Data Binding",
-        "Dagger2",
-        "Koin",
-        "Android Jetpack",
-        "Retrofit",
-        "Ktor",
-        "Jetpack Compose",
-        "Kotlin Multiplatform",
-        "Glide",
-        "Picasso"
+        "React.JS",
+        "Nest.JS",
+        "Express.JS",
+        "Redux",
+        "Apollo Client 3.0",
+        "Webpack 5"
       ]
     },
     {
       "name": "Development tools",
       "keywords": [
-        "IntelliJ IDEA",
-        "Android Studio",
-        "VS Code"
+        "WebStorm IDEA",
+        "VS Code",
+        "Postman"
+      ]
+    },
+    {
+      "name": "CI/CD tools",
+      "keywords": [
+        "TeamCity",
+        "CodeFresh",
       ]
     },
     {
       "name": "Testing tools",
       "keywords": [
-        "jUnit5",
-        "Mockito",
-        "Spek",
-        "KotlinTest",
-        "Espresso"
+        "jest",
+        "enzyme",
+        "react-testing-library",
+        "mocha",
       ]
     },
     {
       "name": "Methodologies",
       "keywords": [
-        "Agile, SCRUM",
-        "Kanban"
+        "Scrum",
+        "ScrumBan"
       ]
     },
     {
-      "name": "Others",
+      "name": "Other",
       "keywords": [
-        "Go",
-        "Dart/Flutter",
-        "Python"
+        "Mentoring"
       ]
     }
   ],
   "languages": [
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    },
     {
       "language": "Ukrainian",
       "fluency": "Native Speaker"
@@ -272,10 +172,6 @@
     {
       "language": "Russian",
       "fluency": "Native Speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Advanced"
     }
   ],
   "interests": [],
