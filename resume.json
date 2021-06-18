@@ -134,7 +134,7 @@
       "name": "CI/CD tools",
       "keywords": [
         "TeamCity",
-        "CodeFresh",
+        "CodeFresh"
       ]
     },
     {
@@ -143,7 +143,7 @@
         "jest",
         "enzyme",
         "react-testing-library",
-        "mocha",
+        "mocha"
       ]
     },
     {
