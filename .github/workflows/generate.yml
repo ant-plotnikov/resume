@@ -14,8 +14,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install -g resume-cli
-      - run: npm install jsonresume-theme-stackoverflow
+      - run: npm install resume-cli jsonresume-theme-stackoverflow
       - run: resume export --theme=stackoverflow index.html
       - run: resume export --theme=stackoverflow resume.pdf
       - name: Create release for tags
