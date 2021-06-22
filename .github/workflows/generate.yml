@@ -16,8 +16,8 @@ jobs:
           node-version: '14'
       - run: npm install -g resume-cli
       - run: npm install jsonresume-theme-stackoverflow
-      - run: resume export index.html
-      - run: resume export resume.pdf
+      - run: resume export --theme=stackoverflow index.html
+      - run: resume export --theme=stackoverflow resume.pdf
       - name: Create release for tags
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
