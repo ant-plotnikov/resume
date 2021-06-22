@@ -83,7 +83,17 @@
       ]
     }
   ],
-  "volunteer": [],
+  "volunteer": [
+    {
+      "organization": "RS School",
+      "position": "React JS Program Mentor & Interviewer",
+      "startDate": "2021-02-20",
+      "endDate": "2021-05-30",
+      "summary": "",
+      "highlights": [],
+      "url": "https://rs.school/"
+    }
+  ],
   "certificates": [],
   "education": [
     {
