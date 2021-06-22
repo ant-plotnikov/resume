@@ -3,7 +3,7 @@
   "basics": {
     "name": "Anton Plotnikov",
     "label": "Software Engineer",
-    "image": "./pictures/profile.jpg",
+    "image": "",
     "email": "ent.plotnikov@gmail.com",
     "phone": "+38 (050) 779-22-24",
     "summary": "Software engineer, proficient in vast front-end technologies stack with more then 3 years of production experience. Working in huge distributed and remote teams, providing RFCs, starting projects form scratch and supporting them through release, working with complex infrastructures, designing software architectures, successful in communication, open to new challenges and opportunities.",
@@ -45,9 +45,9 @@
   "projects": [
     {
       "name": "Epic Online Services",
-      "entity": "EPAM",
+      "entity": "EPAM for Epic Games",
       "description": "Epic is a leading interactive entertainment company and provider of 3D engine technology adopted across industries such as film and television, architecture, automotive, manufacturing, and simulation. Also Epic operates Fortnite, one of the world’s largest games with over 350 million accounts.",
-      "startDate": "2020-08-02",
+      "startDate": "2020-02-08",
       "endDate": "2021-06-18",
       "url": "",
       "roles": [
@@ -178,6 +178,7 @@
   "references": [],
   "meta": {
     "version": "v1.0.0",
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json"
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "theme": "stackoverflow"
   }
 }
