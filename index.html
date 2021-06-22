@@ -1,516 +1,1089 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8">
-      <title>Anton Plotnikov</title>
-      <meta name="description" content="Software engineer, proficient in vast front-end technologies stack with more then 3 years of production experience. Working in huge distributed and remote teams, providing RFCs, starting projects form scratch and supporting them through release, working with complex infrastructures, designing software architectures, successful in communication, open to new challenges and opportunities.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
-    <style>:root {
-  color-scheme: light dark;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Anton Plotnikov</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
 
-  --color-background: #ffffff;
-  --color-primary: #212529;
-  --color-secondary: #95a5a6;
-  --color-muted: #f4f6f6;
-  --color-accent: #f1c40f;
-  --color-link: #2ecc71;
-
-  --scale-ratio: 1.25;
-  --scale0: 1rem;
-  --scale1: calc(var(--scale0) * var(--scale-ratio));
-  --scale2: calc(var(--scale1) * var(--scale-ratio));
-  --scale3: calc(var(--scale2) * var(--scale-ratio));
-  --scale4: calc(var(--scale3) * var(--scale-ratio));
-  --scale5: calc(var(--scale4) * var(--scale-ratio));
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #181a1b;
-    --color-primary: #d1cdc7;
-    --color-secondary: #aaa398;
-    --color-muted: #1e2021;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 14px;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-primary);
-  display: grid;
-  font: 1em/1.5 Lato, sans-serif;
-  gap: 2em;
-  grid-template-columns:
-    [full-start]
-    1fr
-    [main-start side-start]
-    minmax(min-content, 12em)
-    [side-end content-start]
-    minmax(min-content, 36em)
-    [main-end content-end]
-    1fr
-    [full-end];
-  grid-template-rows: auto [content] 0;
-  margin-bottom: 4em;
-}
-
-body::before {
-  content: '';
-  grid-column: full;
-  grid-row: content;
+    line-height: 1;
 }
 
 ol,
 ul {
-  padding-left: 1em;
+    list-style: none;
 }
 
-li + li {
-  margin-top: 0.4em;
+blockquote,
+q {
+    quotes: none;
 }
 
-li::marker,
-.network {
-  color: var(--color-secondary);
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #40484f;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.46153846;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    display: block;
+    margin-bottom: 1.3em;
 }
 
 a {
-  color: var(--color-link);
-  text-decoration: none;
-  transition: color 0.2s;
+    color: #0095ff;
+    text-decoration: none;
 }
 
-a:focus,
 a:hover {
-  color: var(--color-accent);
+    color: #0c65a5;
+    text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h5 {
-  font-weight: normal;
+ul {
+    margin-top: 1rem;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.2;
+li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1.3em;
+}
+
+.highlights>li>p {
+    margin-bottom: 0.5em;
 }
 
 h1 {
-  font-size: var(--scale5);
+    font-size: 2rem;
 }
 
 h2 {
-  color: var(--color-secondary);
-  font-size: var(--scale4);
+    font-size: 1.67rem;
 }
 
 h3 {
-  color: var(--color-accent);
-  font-size: var(--scale3);
-  grid-column: side;
-  margin-bottom: 1rem;
+    font-size: 1.27rem;
 }
 
-h4 {
-  font-size: var(--scale2);
-}
-
-h5 {
-  font-size: var(--scale1);
-}
-
-h6 {
-  font-size: var(--scale0);
+em {
+    color: #757575;
 }
 
 blockquote {
-  border-left: 0.2em solid var(--color-muted);
-  padding-left: 1em;
+    margin-bottom: 1em;
 }
 
-cite {
-  color: var(--color-secondary);
-  font-style: inherit;
+strong {
+    font-weight: 700;
 }
 
-cite::before {
-  content: '— ';
+
+/* main container */
+
+#resume {
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-svg {
-  margin-right: 0.2em;
-  vertical-align: -0.2em;
+
+/* every section wrapper */
+
+.section {
+    margin-bottom: 1rem;
 }
 
-.masthead {
-  background: var(--color-muted);
-  display: inherit;
-  gap: inherit;
-  grid-column: full;
-  grid-template-columns: inherit;
-  padding: 4em 0;
-  text-align: center;
+section .location {
+    margin-right: .5em;
+    color: #606d76;
+    font-weight: 700;
 }
 
-.masthead > *,
-section {
-  grid-column: main;
+#contact {
+    margin-top: .5rem;
 }
 
-.masthead > img {
-  border-radius: 50%;
-  margin: 0 auto;
-  max-width: 12em;
+#profiles .item {
+    padding: 0;
 }
 
-article > * + *,
-blockquote > * + * {
-  margin-top: 0.6em;
+#header>#profiles,
+#header>#contact,
+#skills,
+#languages,
+#interests {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
 }
 
-.stack {
-  display: grid;
-  gap: 1.5em;
+#header>div {
+    line-height: 1.5;
 }
 
-.icon-list {
-  list-style: none;
-  padding: 0;
+#header>div>div {
+    margin-right: 1.2em;
 }
 
-.grid-list {
-  display: grid;
-  gap: 1em;
+#header h1.name {
+    font-size: 2.8rem;
+    font-weight: 100;
+    line-height: 100%;
 }
 
-.spaced-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#header h2.label {
+    color: #202931;
+    font-size: 1.47rem;
+    font-weight: 300;
 }
 
-.spaced-list:first-child::before {
-  border-bottom: 1px solid var(--color-muted);
-  content: '';
-  flex-grow: 1;
-  margin: 0 1em;
-  order: 1;
+#header .picture {
+    width: 11em;
+    float: right;
+    border-radius: 4px;
 }
 
-.spaced-list > :nth-child(2) {
-  order: 2;
+.main-summary {
+    background: #f1f8ff;
+    padding: 1.2em 1em;
+    margin-top: 1rem;
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+.main-summary p {
+    margin: .15em 0 0;
 }
 
-.tag-list > li {
-  background: var(--color-muted);
-  margin: 0 0.2em 0.2em 0;
-  padding: 0.2em 0.6em;
+h2.section-title {
+    display: inline-block;
+    background: #fff;
+    padding: 0 1em 0.3em 0;
+    color: #ff6d1f;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    font-size: .9rem;
 }
 
-@media print, (min-width: 48em) {
-  h3 {
-    text-align: right;
-    margin-bottom: inherit;
-  }
-
-  .masthead {
-    text-align: inherit;
-  }
-
-  .masthead > *,
-  section {
-    grid-column: content;
-  }
-
-  .masthead img {
-    grid-column: side;
-    grid-row: span 2;
-    max-width: 100%;
-  }
-
-  section {
-    display: contents;
-  }
-
-  .grid-list {
-    grid-template-columns: 1fr 1fr;
-  }
+.section>header {
+    position: relative;
 }
-</style>
+
+.fa {
+    margin-right: 0.25em;
+}
+
+.section>header::after {
+    position: absolute;
+    left: 0;
+    top: .7em;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    width: 100%;
+    z-index: -100;
+    display: block;
+}
+
+.section.main-summary>section {
+    margin: 0;
+}
+
+.section>section>header {
+    font-size: 1.38rem;
+    position: relative;
+    margin-top: .7em;
+}
+
+.section>section>header:first-of-type {
+    margin: 0;
+}
+
+.section>section>header .space-left {
+    position: absolute;
+    left: -1.56rem;
+    top: 5px;
+    color: #aaa;
+    line-height: 1;
+    opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+    display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+    font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+    content: "at "
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+    color: #606d76;
+    font-weight: 400;
+}
+
+.section header .date {
+    font-size: 1rem;
+    display: inline-table;
+    padding: .1em 0;
+    font-weight: 600;
+}
+
+ul.keywords,
+ul.courses {
+    margin-top: .5em;
+}
+
+ul.keywords li,
+ul.courses li {
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #3e6d8e;
+    background-color: #dfeaf1;
+    border: 0 solid #dfeaf1;
+    white-space: nowrap;
+}
+
+ul.keywords li:hover,
+ul.courses li:hover {
+    background: #dfeaf0;
+}
+
+.item {
+    padding: .5em 0;
+}
+
+.gpa {
+    padding-bottom: .5em;
+}
+
+.fa.social {
+    font-size: 1.1em;
+}
+
+
+/* Social Media Brand Colors */
+
+.google-plus {
+    color: #dd4b39;
+}
+
+.tumblr {
+    color: #32506d;
+}
+
+.foursquare {
+    color: #0072b1;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.linkedin {
+    color: #007bb6;
+}
+
+.pinterest {
+    color: #cb2027;
+}
+
+.dribbble {
+    color: #ea4c89;
+}
+
+.instagram {
+    color: #517fa4;
+}
+
+.twitter {
+    color: #00aced;
+}
+
+.soundcloud {
+    color: #ff3a00;
+}
+
+.wordpress {
+    color: #21759b;
+}
+
+.youtube {
+    color: #bb0000;
+}
+
+.github {
+    color: #171515;
+}
+
+.stack-overflow {
+    color: #828386;
+    position: relative;
+}
+
+.flickr {
+    color: #ff0084;
+}
+
+.stack-overflow::after {
+    position: absolute;
+    left: 0;
+    content: '\f16c';
+    color: #f68a1f;
+    overflow: hidden;
+    height: 100%;
+}
+
+.telegram {
+    color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+    width: 15em;
+    padding: 0 .5em .5em 0;
+    border-bottom: none;
+}
+
+#skills .item {
+    width: 16em;
+}
+
+#skills .item .keywords {
+    width: 15em;
+}
+
+
+/* Skill chart */
+
+.level {
+    margin-bottom: .5em;
+}
+
+.level .bar {
+    border: 1px solid #ddd;
+    display: block;
+    width: 10em;
+    height: 5px;
+    position: relative;
+}
+
+.level .bar::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background: black;
+    height: 5px;
+}
+
+.level.beginner .bar::after {
+    background: #EB5F51;
+    width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+    background: #ffdf1f;
+    width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+    background: #5CB85C;
+    width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+    background: #59C596;
+    width: 10em;
+}
+
+#references .item {
+    padding-left: .5em;
+    border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  visibility: hidden;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.display {
+    display: block;
+    opacity: 1 !important;
+}
+
+.margin1 {
+    margin-bottom: .5rem;
+}
+
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+    #resume {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+    li {
+        margin-left: 1.5em;
+    }
+    #resume {
+        width: 820px;
+        margin: 2rem auto;      
+    }
+    .section>section>header .space-left {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .section>section {
+        margin-left: 1.67rem;
+    }
+    .toggle-item {
+        transform: translate(-9999px);
+    }
+    .toggle-item+label {
+        display: block;
+        margin-top: -16px;
+    }
+    .toggle-item:checked+label:after {
+        content: '\f0d7';
+    }
+    .toggle-item+label:after {
+        float: left;
+        cursor: pointer;
+        margin-left: -20px;
+        color: #aaa;
+        font-size: 16px;
+        content: '\f0da';
+        font-family: Fontawesome;
+    }
+    .toggle-item~.item {
+        height: 0;
+        opacity: 0;
+    }
+    .toggle-item:checked~.item {
+        height: auto;
+        opacity: 1;
+        transition: all .5s linear;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "| ";
+    }
+    .header-left {
+        float: left;
+        width: 70%;
+        word-break: normal;
+    }
+    .section header .date {
+        float: right;
+        padding: .2em;
+    }
+    .display {
+        display: none;
+    }
+    .display:not(.none) {
+        display: block;
+    }
+}
+
+@media print {
+    #resume {
+        margin: 0;
+        padding: 0;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1.3;
+        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+    }
+    @page {
+        margin: 1cm 1.4cm;
+    }
+    .item-count {
+        display: none;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "at ";
+    }
+    .main-summary {
+        padding: 2rem 0;
+    }
+    .section {
+        margin: .8rem 0;
+        padding: 0;
+    }
+    .section header {
+        padding-bottom: .15rem;
+    }
+    .section .location {
+        padding-bottom: .15rem;
+    }
+    .stack-overflow::after {
+        content: "";
+    }
+    .fa.social {
+        color: #828386;
+    }
+    ul {
+        margin-top: .4em;
+    }
+    ul,
+    li {
+        padding: 0;
+    }
+    ul.keywords li,
+    ul.courses li {
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+        text-transform: lowercase;
+    }
+    ul.keywords li::after,
+    ul.courses li::after {
+        padding: 0 0 0 .1rem;
+        content: " |";
+    }
+    ul.keywords::before,
+    ul.courses::before {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    ul.keywords::before {
+        content: "Skills acquired: ";
+    }
+    #skills .keywords::before {
+        content: '';
+    }
+    .section p {
+        margin: 0;
+        padding: 0;
+    }
+    ul.courses::before {
+        content: "Major courses: ";
+    }
+    ul.keywords li:last-of-type::after,
+    ul.courses li:last-of-type::after {
+        content: "";
+    }
+    .level em {
+        font-style: normal;
+        padding: .1em 0;
+    }
+    .level .bar {
+        display: none;
+    }
+    #profiles .item {
+        padding: 0;
+    }
+    .item.display {
+        display: block;
+        opacity: 1 !important;
+    }
+}
+
+  </style>
+  
   </head>
   <body>
-      <header class="masthead">
-          <img src="" alt="">
-        <div>
-            <h1>Anton Plotnikov</h1>
-            <h2>Software Engineer</h2>
-        </div>
-        <ul class="icon-list">
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                Kharkiv, Ukraine
-              </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:ent.plotnikov@gmail.com">ent.plotnikov@gmail.com</a>
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <a href="tel:+380507792224">+38 (050) 779-22-24</a>
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                  <a href="https://www.linkedin.com/in/anton-plotnikov-90137b174">Anton Plotnikov</a>
-                <span class="network">(LinkedIn)</span>
-            </li>
-        </ul>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Anton Plotnikov</h1>
+    			<h2 class="label">Software Engineer</h2>
+    		</div>
+    		
+    		<span class="location">
+    			<span class="city">Kharkiv,</span> 
+    			<span class="region">Ukraine</span> 
+    			<span class="countryCode">UA</span> 
+    		</span>
+    		
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="fa fa-envelope-o"></span>
+    				<a href="mailto:ent.plotnikov@gmail.com">ent.plotnikov@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fa fa-mobile"></span>
+    				<a href="tel:+38 (050) 779-22-24">+38 (050) 779-22-24</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fa fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/anton-plotnikov-90137b174">Anton Plotnikov</a>
+    					</span> 
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section main-summary">
+    		<section>
+    			<div><p>Software engineer, proficient in vast front-end technologies stack with more then 3 years of production experience. Working in huge distributed and remote teams, providing RFCs, starting projects form scratch and supporting them through release, working with complex infrastructures, designing software architectures, successful in communication, open to new challenges and opportunities.</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section margin1">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Programming Languages/Technologies
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>JS Core</li>
+    				<li>Typescript</li>
+    				<li>Software Architecture Design</li>
+    				<li>Clean Architecture</li>
+    				<li>REST, GraphQL</li>
+    				<li>MVC/MVP/MVVM</li>
+    				<li>Micro Front-Ends</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Frameworks/Libraries
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>React.JS</li>
+    				<li>Nest.JS</li>
+    				<li>Express.JS</li>
+    				<li>Redux</li>
+    				<li>Apollo Client 3.0</li>
+    				<li>Webpack 5</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Development tools
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>WebStorm IDEA</li>
+    				<li>VS Code</li>
+    				<li>Postman</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				CI/CD tools
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>TeamCity</li>
+    				<li>CodeFresh</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Testing tools
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>jest</li>
+    				<li>enzyme</li>
+    				<li>react-testing-library</li>
+    				<li>mocha</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Methodologies
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>Scrum</li>
+    				<li>ScrumBan</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Other
+    			</h3>
+    			 			<ul class="keywords">
+    				<li>Mentoring</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(2)</span></h2>
       </header>
-        <section id="about">
-          <h3>About</h3>
-          <article>
-            <p>Software engineer, proficient in vast front-end technologies stack with more then 3 years of production experience. Working in huge distributed and remote teams, providing RFCs, starting projects form scratch and supporting them through release, working with complex infrastructures, designing software architectures, successful in communication, open to new challenges and opportunities.</p>
-          </article>
-        </section>
-
+    
       <section id="work">
-        <h3>Work</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>EPAM</h4>
-                  <span>
-                    <time datetime="2018-06-22">Jun 2018</time> –
-                    <time datetime="2021-06-18">Jun 2021</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Senior Software Engineer</strong>
-                    <a href="https://www.epam.com/">www.epam.com</a>
-                </div>
-              </header>
-                <p>EPAM is a leading digital consulting company with more then 40K developers providing excellent programming solutions for diverse business domains from gaming to healthcare.</p>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Line-Up</h4>
-                  <span>
-                    <time datetime="2018-03-11">Mar 2018</time> –
-                    <time datetime="2018-06-12">Jun 2018</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Software Engineer</strong>
-                    <a href="https://lineup.com.ua/">lineup.com.ua</a>
-                </div>
-              </header>
-                <p>LineUp is a business and technology solutions company of highly experienced professionals.</p>
-            </article>
-        </div>
+        <section class="work-item">
+    			
+    			<span class="location">
+    				<span class="fa fa-map-marker"></span> 
+    			</span>
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>EPAM is a leading digital consulting company with more then 40K developers providing excellent programming solutions for diverse business domains from gaming to healthcare.</p></p>
+            </div>
+        	</div>
+        </section>
+        <section class="work-item">
+    			
+    			<span class="location">
+    				<span class="fa fa-map-marker"></span> 
+    			</span>
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>LineUp is a business and technology solutions company of highly experienced professionals.</p></p>
+            </div>
+        	</div>
+        </section>
       </section>
-      <section id="volunteer">
-        <h3>Volunteer</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>RS School</h4>
-                  <span>
-                    <time datetime="2021-02-20">Feb 2021</time> –
-                    <time datetime="2021-05-30">May 2021</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>React JS Program Mentor &amp; Interviewer</strong>
-                    <a href="https://rs.school/">rs.school</a>
-                </div>
-              </header>
-                
-            </article>
-        </div>
-      </section>
-      <section id="education">
-        <h3>Education</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Kharkiv V.N.Karazin National University</h4>
-                  <span>
-                    <time datetime="2012-09-31">Oct 2012</time> –
-                    <time datetime="2018-02-18">Feb 2018</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Biochemistry</strong>
-                </div>
-              </header>
-                <p>Master</p>
-            </article>
-        </div>
-      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(2)</span></h2>
+      </header>
       <section id="projects">
-        <h3>Projects</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Epic Online Services</h4>
-                  <span>
-                    <time datetime="2020-02-08">Feb 2020</time> –
-                    <time datetime="2021-06-18">Jun 2021</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                  <span>
-                      <strong>Key Developer</strong>
-                      at <strong>EPAM for Epic Games</strong>
-                  </span>
-                    <a href=""></a>
-                </div>
-              </header>
-                <p>Epic is a leading interactive entertainment company and provider of 3D engine technology adopted across industries such as film and television, architecture, automotive, manufacturing, and simulation. Also Epic operates Fortnite, one of the world’s largest games with over 350 million accounts.</p>
-                <ul>
-                    <li>Working in 7 subsystems with different tech stack;</li>
-                    <li>Working in a distributed team of 80+ professionals;</li>
-                    <li>Working with hybrid applications and micro front-ends;</li>
-                    <li>Introduce code quality gates, integrate them to CI;</li>
-                    <li>Taking part in software architectural decisions, system design;</li>
-                    <li>Ownership for 1 service;</li>
-                    <li>Taking part in infosec audits.</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Video Streaming Service</h4>
-                  <span>
-                    <time datetime="2018-08-31">Aug 2018</time> –
-                    <time datetime="2019-11-31">Dec 2019</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                  <span>
-                      <strong>Developer</strong>
-                      at <strong>EPAM</strong>
-                  </span>
-                    <a href=""></a>
-                </div>
-              </header>
-                <p>A Netflix-like application for a national TV provider, supporting various devices and streaming protocols, applying modern accessibility standards, integrated with ads and analytics systems to enhance consumer experience.</p>
-                <ul>
-                    <li>Working in a distributed team of 30+ members;</li>
-                    <li>Working with various devices and streams, such as PS4, HbbTV, ChromeCast, WEB;</li>
-                    <li>Adding core logic modules to existing framework;</li>
-                    <li>Working closely in collaboration with IOS and Android teams;</li>
-                    <li>Working on Observability and Ads integration;</li>
-                    <li>Ownership for ChromeCast Receiver application.</li>
-                </ul>
-            </article>
-        </div>
+        <section class="project-item">
+    
+          <header>
+            <div class="position">Epic Online Services</div>
+            <div class="date">
+              <span class="startDate">February 2020</span>
+              <span class="endDate">- June 2021</span>
+            </div>
+          </header>
+          <div class="item">
+            <ul class="highlights">
+                <li><p>Working in 7 subsystems with different tech stack;</p></li>
+                <li><p>Working in a distributed team of 80+ professionals;</p></li>
+                <li><p>Working with hybrid applications and micro front-ends;</p></li>
+                <li><p>Introduce code quality gates, integrate them to CI;</p></li>
+                <li><p>Taking part in software architectural decisions, system design;</p></li>
+                <li><p>Ownership for 1 service;</p></li>
+                <li><p>Taking part in infosec audits.</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="project-item">
+    
+          <header>
+            <div class="position">Video Streaming Service</div>
+            <div class="date">
+              <span class="startDate">August 2018</span>
+              <span class="endDate">- Invalid date</span>
+            </div>
+          </header>
+          <div class="item">
+            <ul class="highlights">
+                <li><p>Working in a distributed team of 30+ members;</p></li>
+                <li><p>Working with various devices and streams, such as PS4, HbbTV, ChromeCast, WEB;</p></li>
+                <li><p>Adding core logic modules to existing framework;</p></li>
+                <li><p>Working closely in collaboration with IOS and Android teams;</p></li>
+                <li><p>Working on Observability and Ads integration;</p></li>
+                <li><p>Ownership for ChromeCast Receiver application.</p></li>
+            </ul>
+          </div>
+        </section>
       </section>
-      <section id="skills">
-        <h3>Skills</h3>
-        <div class="grid-list">
-            <div>
-                <h4>Programming Languages/Technologies</h4>
-                <ul class="tag-list">
-                    <li>JS Core</li>
-                    <li>Typescript</li>
-                    <li>Software Architecture Design</li>
-                    <li>Clean Architecture</li>
-                    <li>REST, GraphQL</li>
-                    <li>MVC/MVP/MVVM</li>
-                    <li>Micro Front-Ends</li>
-                </ul>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Volunteer</h2>
+      </header>
+      <section id="volunteer">
+        <section class="volunteer-item">
+    
+    
+          <header>
+            <div class="header-left">
+              <div class="position">
+                React JS Program Mentor &amp; Interviewer
+              </div>
+              <div class="organization">
+                RS School
+              </div>
             </div>
-            <div>
-                <h4>Frameworks/Libraries</h4>
-                <ul class="tag-list">
-                    <li>React.JS</li>
-                    <li>Nest.JS</li>
-                    <li>Express.JS</li>
-                    <li>Redux</li>
-                    <li>Apollo Client 3.0</li>
-                    <li>Webpack 5</li>
-                </ul>
+            <div class="date">
+              <span class="startDate">
+              February 2021
+              </span>
+              <span class="endDate">
+              - May 2021
+              </span>
             </div>
-            <div>
-                <h4>Development tools</h4>
-                <ul class="tag-list">
-                    <li>WebStorm IDEA</li>
-                    <li>VS Code</li>
-                    <li>Postman</li>
-                </ul>
-            </div>
-            <div>
-                <h4>CI/CD tools</h4>
-                <ul class="tag-list">
-                    <li>TeamCity</li>
-                    <li>CodeFresh</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Testing tools</h4>
-                <ul class="tag-list">
-                    <li>jest</li>
-                    <li>enzyme</li>
-                    <li>react-testing-library</li>
-                    <li>mocha</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Methodologies</h4>
-                <ul class="tag-list">
-                    <li>Scrum</li>
-                    <li>ScrumBan</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Other</h4>
-                <ul class="tag-list">
-                    <li>Mentoring</li>
-                </ul>
-            </div>
-        </div>
+          </header>
+          <div class="item">
+          </div>
+        </section>
       </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header>
+            <div class="header-left">
+              <div class="studyType">
+                Master
+              </div>
+              <div class="area">
+                Biochemistry
+              </div>
+              <div class="institution">
+                Kharkiv V.N.Karazin National University
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              Invalid date
+              </span>
+              <span class="endDate">
+              - 2018
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section margin1">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
       <section id="languages">
-        <h3>Languages</h3>
-        <div class="grid-list">
-            <div>
-                <h4>English</h4>
-              Advanced
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency advanced">
+              <em>Advanced</em>
+              <div class="bar"></div>
             </div>
-            <div>
-                <h4>Ukrainian</h4>
-              Native Speaker
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Ukrainian
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native Speaker</em>
+              <div class="bar"></div>
             </div>
-            <div>
-                <h4>Russian</h4>
-              Native Speaker
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Russian
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native Speaker</em>
+              <div class="bar"></div>
             </div>
+          </div>
         </div>
       </section>
+    </section>
+
   </body>
 </html>
