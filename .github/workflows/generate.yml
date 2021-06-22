@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install -g resume-cli
-      - run: npm install jsonresume-theme-even
+      - run: npm install jsonresume-theme-stackoverflow
       - run: resume export index.html
       - run: resume export resume.pdf
       - name: Create release for tags
