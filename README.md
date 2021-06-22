@@ -1,6 +1,6 @@
-# Denys Nykyforov's resume
+# Anton Plotnikov's resume
 
-https://popalay.github.io/resume/
+https://ant-plotnikov.github.io/resume/
 
 ## License
 ```
